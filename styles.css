@@ -1,3 +1,5 @@
+m
+
 /* ===== DESIGN TOKENS — ELEGANT MINIMALIST THEME ===== */
 :root,
 [data-theme="dark"] {
@@ -1928,35 +1930,35 @@ img {
         z-index: 10;
     }
 
-    /* Spread cards out significantly more on mobile */
+    /* Spread cards out significantly more on mobile - UPDATED to be closer and symmetric */
     .fc-1 {
-        top: -35%;
+        top: -25%;
         left: 50%;
     }
 
     .fc-2 {
         top: 0%;
-        left: 135%;
+        left: 115%;
     }
 
     .fc-3 {
         top: 100%;
-        left: 135%;
+        left: 115%;
     }
 
     .fc-4 {
-        top: 145%;
+        top: 125%;
         left: 50%;
     }
 
     .fc-5 {
         top: 100%;
-        left: -35%;
+        left: -15%;
     }
 
     .fc-6 {
         top: 0%;
-        left: -35%;
+        left: -15%;
     }
 
     .section {
@@ -2002,29 +2004,29 @@ img {
         height: 160px;
     }
 
-    /* Adjust cards for 160px wrapper */
+    /* Adjust cards for 160px wrapper - UPDATED to be closer */
     .fc-1 {
-        top: -40%;
+        top: -30%;
     }
 
     .fc-2 {
-        left: 140%;
+        left: 120%;
     }
 
     .fc-3 {
-        left: 140%;
+        left: 120%;
     }
 
     .fc-4 {
-        top: 150%;
+        top: 130%;
     }
 
     .fc-5 {
-        left: -40%;
+        left: -20%;
     }
 
     .fc-6 {
-        left: -40%;
+        left: -20%;
     }
 
     .hero-buttons {
