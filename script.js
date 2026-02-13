@@ -148,7 +148,8 @@
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
         // === Enhanced particle system (multi-color, more particles) ===
-        const count = 500;
+        const isMobile = window.innerWidth < 768;
+        const count = isMobile ? 200 : 500; // Reduced for mobile performance
         const geo = new THREE.BufferGeometry();
         const pos = new Float32Array(count * 3);
         const vel = new Float32Array(count * 3);
@@ -163,8 +164,9 @@
 
         for (let i = 0; i < count; i++) {
             const i3 = i * 3;
-            pos[i3] = (Math.random() - 0.5) * 180;
-            pos[i3 + 1] = (Math.random() - 0.5) * 130;
+            // Spread particles wider on mobile to cover taller screen
+            pos[i3] = (Math.random() - 0.5) * (isMobile ? 120 : 180);
+            pos[i3 + 1] = (Math.random() - 0.5) * (isMobile ? 180 : 130);
             pos[i3 + 2] = (Math.random() - 0.5) * 100;
             vel[i3] = (Math.random() - 0.5) * 0.008;
             vel[i3 + 1] = (Math.random() - 0.5) * 0.008;
@@ -191,7 +193,7 @@
 
         // === Connection lines (constellation effect) ===
         const lineGeo = new THREE.BufferGeometry();
-        const maxLines = 300;
+        const maxLines = isMobile ? 100 : 300;
         const linePositions = new Float32Array(maxLines * 6);
         lineGeo.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
         lineGeo.setDrawRange(0, 0);
@@ -369,11 +371,8 @@
             });
         });
 
-        // 3D Cube
-        gsap.from('.cube-section', {
-            scrollTrigger: { trigger: '.cube-section', start: 'top 85%' },
-            opacity: 0, scale: 0.4, duration: 1.2, ease: 'back.out(1.5)'
-        });
+        // 3D Cube Removed
+        // gsap.from('.cube-section', { ... });
 
         // Timeline — from left with stagger
         gsap.utils.toArray('.timeline-item').forEach((item, i) => {
