@@ -2,7 +2,6 @@
 
 A premium, high-performance personal portfolio website designed for software engineers and full-stack developers. Built with a focus on immersive 3D interactions, cinematic aesthetics, and buttery-smooth animations.
 
-![Portfolio Preview](./preview.png)
 
 ## 🚀 Key Features
 
@@ -79,3 +78,4 @@ This project is open source and available under the [MIT License](LICENSE). Feel
 
 ---
 *Designed & Developed by Harsh Chandak*
+
